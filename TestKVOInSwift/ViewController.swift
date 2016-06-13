@@ -15,24 +15,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelLastName: UILabel!
     @IBOutlet weak var labelFullName: UILabel!
     
+    @IBOutlet weak var labelAddress: UILabel!
+    
     private var person: Person?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.person = Person(firstName: "Peter", lastName: "Cook")
+        let address = Address(firstLine: "China", secondLine: "Shanghai")
+        self.person = Person(firstName: "Peter", lastName: "Cook", address: address)
         
         //NSKeyValueObservingOptions.New， 这个选项代表我们监听 KVO 每次属性改变后的新值
+        //NSKeyValueObservingOptions.New 每次属性改变后的新值
+        //NSKeyValueObservingOptions.Old 每次属性改变之前的旧值
         self.person?.addObserver(self, forKeyPath: "firstName", options: NSKeyValueObservingOptions.New, context: nil)
         self.person?.addObserver(self, forKeyPath: "lastName", options: NSKeyValueObservingOptions.New, context: nil)
          self.person?.addObserver(self, forKeyPath: "fullName", options: NSKeyValueObservingOptions.New, context: nil)
-        //NSKeyValueObservingOptions.New 每次属性改变后的新值
-        //NSKeyValueObservingOptions.Old 每次属性改变之前的旧值
         
-        //
-        labelFirstName.text = person?.firstName
-        labelLastName.text = person?.lastName
-        labelFullName.text = person?.fullName
+        //KVC方式取值
+        labelFirstName.text = person!.valueForKey("firstName") as? String
+        labelLastName.text = person!.valueForKey("lastName") as? String
+        labelFullName.text = person!.valueForKey("fullName") as? String
+        
+        //KVC获取属性时对象时的值
+        let firstLine = person!.valueForKeyPath("address.firstLine")!
+        let secondLine = person!.valueForKeyPath("address.secondLine")!
+        labelAddress.text = "\(firstLine) \(secondLine)"
+        
+        //labelFirstName.text = person?.firstName
+        //labelLastName.text = person?.lastName
+        //labelFullName.text = person?.fullName
     }
 
     override func didReceiveMemoryWarning() {

@@ -37,7 +37,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpE-br-Wcm">
-                                <rect key="frame" x="275.5" y="177" width="49" height="24"/>
+                                <rect key="frame" x="275" y="177" width="49" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJN-ji-tY8">
+                                <rect key="frame" x="275.5" y="116" width="49" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,10 +58,13 @@
                             <constraint firstItem="2mK-zb-XCm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="feH-2H-VsE"/>
                             <constraint firstItem="JOR-HP-W1D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gTa-2p-9qt"/>
                             <constraint firstItem="JOR-HP-W1D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lSJ-NO-0Pt"/>
+                            <constraint firstItem="LJN-ji-tY8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p3r-O3-bEH"/>
+                            <constraint firstItem="fpE-br-Wcm" firstAttribute="top" secondItem="LJN-ji-tY8" secondAttribute="bottom" constant="37" id="vWh-vr-1h0"/>
                             <constraint firstItem="465-J4-nqv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xVn-Id-H3f"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="labelAddress" destination="LJN-ji-tY8" id="W4y-0P-ZnN"/>
                         <outlet property="labelFirstName" destination="2mK-zb-XCm" id="Whf-hk-nxd"/>
                         <outlet property="labelFullName" destination="fpE-br-Wcm" id="MC9-rp-Ju1"/>
                         <outlet property="labelLastName" destination="JOR-HP-W1D" id="3D5-Kg-FMa"/>

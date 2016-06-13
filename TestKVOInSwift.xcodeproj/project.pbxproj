@@ -13,6 +13,7 @@
 		2E630DBE1D08505200FDB2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E630DBD1D08505200FDB2AB /* Assets.xcassets */; };
 		2E630DC11D08505200FDB2AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E630DBF1D08505200FDB2AB /* LaunchScreen.storyboard */; };
 		2E630DC91D0D81FF00FDB2AB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E630DC81D0D81FF00FDB2AB /* Person.swift */; };
+		2E630DCB1D0E444F00FDB2AB /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E630DCA1D0E444F00FDB2AB /* Address.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2E630DC01D08505200FDB2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E630DC21D08505200FDB2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E630DC81D0D81FF00FDB2AB /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		2E630DCA1D0E444F00FDB2AB /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2E630DB61D08505200FDB2AB /* AppDelegate.swift */,
 				2E630DB81D08505200FDB2AB /* ViewController.swift */,
 				2E630DC81D0D81FF00FDB2AB /* Person.swift */,
+				2E630DCA1D0E444F00FDB2AB /* Address.swift */,
 				2E630DBA1D08505200FDB2AB /* Main.storyboard */,
 				2E630DBD1D08505200FDB2AB /* Assets.xcassets */,
 				2E630DBF1D08505200FDB2AB /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				2E630DC91D0D81FF00FDB2AB /* Person.swift in Sources */,
 				2E630DB91D08505200FDB2AB /* ViewController.swift in Sources */,
+				2E630DCB1D0E444F00FDB2AB /* Address.swift in Sources */,
 				2E630DB71D08505200FDB2AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

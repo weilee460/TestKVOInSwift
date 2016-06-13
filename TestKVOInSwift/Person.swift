@@ -19,10 +19,19 @@ class Person: NSObject {
         }
     }
     
-    init(firstName:String, lastName: String) {
+    var address: Address
+    
+    init(firstName:String, lastName: String, address: Address) {
         self.firstName = firstName
         self.lastName = lastName
+        self.address = address
     }
+    
+    //KVC无法找到属性时，这时候 KVC 协议其实会调用 valueForUndefinedKey 方法
+    override func valueForUndefinedKey(key: String) -> AnyObject? {
+        return "No Find Key"
+    }
+    
     //实现 keyPathsForValuesAffectingValueForKey 方法在实体类中声明属性依赖
     override class func keyPathsForValuesAffectingValueForKey(key: String) -> Set<String>
     {
@@ -38,7 +47,7 @@ class Person: NSObject {
     override class func automaticallyNotifiesObserversForKey(key: String) -> Bool
     {
         if key == "firstName" {
-            //取消 firstName 这个属性KVO的自动通知
+            //取消 firstName 这个属性KVO的自动通知，改为手动通知
             return false
         }
         else {
